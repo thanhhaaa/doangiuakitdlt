@@ -16,22 +16,22 @@ print('ngày hiện tại: ', current_day)
 flag = False
 while flag ==False :
       gbt = int(input("nhập giờ báo thức"))
-      if (gbt<0) or (gbt>23):
+      while (gbt<0) or (gbt>23):
           gbt=int(input("vui lòng nhập lại giờ báo thức"))
       else:
           pbt = int(input("nhập phút báo thức"))
-          if (pbt<0) or (pbt>59):
+          while (pbt<0) or (pbt>59):
               pbt =int(input("vui lòng nhập lại phút báo thức"))
           else:
               giaybt= int(input("nhập giây báo thức"))
-              if (giaybt<0) or (giaybt>59):
+              while (giaybt<0) or (giaybt>59):
                   giaybt= int(input("vui lòng nhập lại giây báo thức"))
       nbt =int(input("nhập năm báo thức"))
       while (nbt < int(current_year)) :
           nbt= int(input("mời nhập lại năm báo thức"))
       else :
           tbt = int(input("nhập tháng báo thức"))
-          if (tbt<1) or (tbt>12):
+          while (tbt<1) or (tbt>12):
               tbt = int(input("vui lòng nhập lại tháng báo thức"))
           else:
               ngbt = int(input("nhập ngày báo thức"))
@@ -42,29 +42,29 @@ while flag ==False :
               kq = 2
               if (tbt == 2):
                   if (kq == 1):
-                      if (ngbt < 1) or (ngbt > 29):
+                      while (ngbt < 1) or (ngbt > 29):
                           ngbt = int(input("vui lòng nhập lại ngày báo thức"))
                       else:
                           kq = 3
                   else :
-                      if (ngbt < 1) or (ngbt > 28):
+                      while (ngbt < 1) or (ngbt > 28):
                           ngbt = int(input("vui lòng nhập lại ngày báo thức"))
                       else :
                           kq = 3
               if (tbt!= 2):
                   if (tbt < 8):
                       if (tbt%2 == 0):
-                          if (ngbt < 1) or (ngbt > 30):
+                          while (ngbt < 1) or (ngbt > 30):
                               ngbt = int(input("vui lòng nhập lại ngày báo thức"))
                           else :
                               kq = 3
                       else:
-                          if (ngbt < 1) or (ngbt > 31):
+                          while (ngbt < 1) or (ngbt > 31):
                               ngbt = int(input("vui lòng nhập lại ngày báo thức"))
                           else:
                               kq = 3
                   else:
-                      if (ngbt < 1) or (ngbt > 31):
+                      while (ngbt < 1) or (ngbt > 31):
                           ngbt = int(input('vui lòng nhập lại ngày báo thức'))
                       else:
                           kq = 3
