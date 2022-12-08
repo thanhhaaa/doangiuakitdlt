@@ -12,59 +12,59 @@ print('giây hiện tại: ', current_second)
 print('năm hiện tại: ', current_year)
 print('tháng hiện tại: ', current_month)
 print('ngày hiện tại: ', current_day)
-gbt = int(input("nhap gio bao thuc"))
+gbt = int(input("nhập giờ báo thức"))
 if (gbt<0) or (gbt>23):
     gbt=int(input("vui lòng nhập lại giờ báo thức"))
 else:
-    pbt = int(input("nhap phút bao thuc"))
+    pbt = int(input("nhập phút báo thức"))
     if (pbt<0) or (pbt>60):
         pbt =int(input("vui lòng nhập lại phút báo thức"))
     else:
         giaybt= int(input("nhập giây báo thức"))
         if (giaybt<0) or (giaybt>60):
             giaybt= int(input("vui lòng nhập lại giây báo thức"))
-nbt =int(input("nhap nam bao thuc"))
+nbt =int(input("nhập năm báo thức"))
 while (nbt < int(current_year)) :
-   nbt= int(input("moi nhap lai nam bao thuc"))
+   nbt= int(input("mời nhập lại năm báo thức"))
 else :
-   tbt = int(input("nhap thang bao thuc"))
+   tbt = int(input("nhập tháng báo thức"))
    if (tbt<1) or (tbt>12):
-       tbt=int(input("vui lòng nhập lại tháng báo thức"))
+       tbt = int(input("vui lòng nhập lại tháng báo thức"))
    else:
-       ngbt = int(input("nhap ngay bao thuc"))
-       kq=0
-       if (nbt % 4==0):
-           kq=1
+       ngbt = int(input("nhập ngày báo thức"))
+       kq = 0
+       if (nbt % 4 == 0):
+           kq = 1
        else :
-           kq=2
-       if (tbt==2):
-           if (kq==1):
-               if (ngbt<1) or (ngbt>29):
-                   ngbt=int(input("vui lòng nhập lại ngày báo thức"))
+           kq = 2
+       if (tbt == 2):
+           if (kq == 1):
+               if (ngbt < 1) or (ngbt > 29):
+                   ngbt = int(input("vui lòng nhập lại ngày báo thức"))
                else:
-                   kq=3
+                   kq = 3
            else :
-               if (ngbt<1) or (ngbt>28):
-                   ngbt =int(input("vui lòng nhập lại ngày báo thức"))
+               if (ngbt < 1) or (ngbt > 28):
+                   ngbt = int(input("vui lòng nhập lại ngày báo thức"))
                else :
-                   kq=3
-       if (tbt!=2):
-           if (tbt<8):
-               if (tbt%2==0):
-                   if (ngbt<1) or (ngbt>30):
-                       ngbt=int(input("vui lòng nhập lại ngày báo thức"))
+                   kq = 3
+       if (tbt!= 2):
+           if (tbt < 8):
+               if (tbt%2 == 0):
+                   if (ngbt < 1) or (ngbt > 30):
+                       ngbt = int(input("vui lòng nhập lại ngày báo thức"))
                    else :
-                       kq=3
+                       kq = 3
                else:
-                   if (ngbt<1) or (ngbt>31):
-                       ngbt= int(input("vui lòng nhập lại ngày báo thức"))
+                   if (ngbt < 1) or (ngbt > 31):
+                       ngbt = int(input("vui lòng nhập lại ngày báo thức"))
                    else:
-                       kq=3
+                       kq = 3
            else:
-               if ngbt<1 or ngbt>31:
-                   ngbt=int(input('vui lòng nhập lại ngày báo thức'))
+               if (ngbt < 1) or (ngbt > 31):
+                   ngbt = int(input('vui lòng nhập lại ngày báo thức'))
                else:
-                   kq=3
+                   kq = 3
 
 from datetime import datetime
 
@@ -86,8 +86,8 @@ if t3 > t4:
 else:
     print('Thời gian đặt báo thức không hợp lệ')
 
-flag=False
-while flag==False :
+flag = False
+while flag == False :
    from datetime import datetime
    now = datetime.now()
    current_year = now.strftime ("%Y")
@@ -97,7 +97,7 @@ while flag==False :
    current_minute = now.strftime("%M")
    current_second = now.strftime("%S")
 
-   if  int(current_year)==nbt and int(current_month) == tbt and int(current_day)== ngbt and int(current_hour) == gbt and int(current_minute) == pbt and int(current_second)==giaybt: 
+   if  int(current_year) == nbt and int(current_month) == tbt and int(current_day) == ngbt and int(current_hour) == gbt and int(current_minute) == pbt and int(current_second)==giaybt:
        print('dậy đi ')
        flag = True
    else:
@@ -126,7 +126,7 @@ else:
                 print('dậy đi ')
                 test=int(input('tắt báo thức nhập 1, hoãn báo thức nhập 0: '))
                 flag = True
-                if test==1:
+                if test == 1:
                    print('đã tắt báo thức')
              else:
                  flag=False
