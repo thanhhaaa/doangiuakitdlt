@@ -16,15 +16,15 @@ print('ngày hiện tại: ', current_day)
 flag = False
 while flag ==False :
       gbt = int(input("nhập giờ báo thức"))
-      if (gbt<0) or (gbt>23):
+      while (gbt<0) or (gbt>23):
           gbt=int(input("vui lòng nhập lại giờ báo thức"))
       else:
           pbt = int(input("nhập phút báo thức"))
-          if (pbt<0) or (pbt>59):
+          while (pbt<0) or (pbt>59):
               pbt =int(input("vui lòng nhập lại phút báo thức"))
           else:
               giaybt= int(input("nhập giây báo thức"))
-              if (giaybt<0) or (giaybt>59):
+              while (giaybt<0) or (giaybt>59):
                   giaybt= int(input("vui lòng nhập lại giây báo thức"))
       nbt =int(input("nhập năm báo thức"))
       while (nbt < int(current_year)) :
