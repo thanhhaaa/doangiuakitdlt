@@ -17,11 +17,11 @@ if (gbt<0) or (gbt>23):
     gbt=int(input("vui lòng nhập lại giờ báo thức"))
 else:
     pbt = int(input("nhập phút báo thức"))
-    if (pbt<0) or (pbt>60):
+    if (pbt<0) or (pbt>59):
         pbt =int(input("vui lòng nhập lại phút báo thức"))
     else:
         giaybt= int(input("nhập giây báo thức"))
-        if (giaybt<0) or (giaybt>60):
+        if (giaybt<0) or (giaybt>59):
             giaybt= int(input("vui lòng nhập lại giây báo thức"))
 nbt =int(input("nhập năm báo thức"))
 while (nbt < int(current_year)) :
